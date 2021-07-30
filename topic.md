@@ -1,41 +1,41 @@
-clean a topic
+# Notes
+scripts below does not use the `.sh` extension, such that makes it a bit easier for Confluent Platform
 
 # List topics
-bin/kafka-topics.sh --bootstrap-server kafka1:9092 --list
+`kafka-topics --bootstrap-server localhost:9092 --list`
 
 # Create a Topic
-bin/kafka-topics.sh --bootstrap-server kafka1:9092 --create --topic color-input --partitions 1 --replication-factor 1
+`kafka-topics --bootstrap-server localhost:9092 --create --topic topic1 --partitions 1 --replication-factor 1`
 
-# With compaction enabled
---config cleanup.policy=compact
+# Create a topic With compaction enabled
+`kafka-topics --bootstrap-server localhost:9092 --create --topic topic1 --partitions 1 --replication-factor 1 --config cleanup.policy=compact`
 
-# Describe a topic
-kafka-topics --bootstrap-server localhost:9092 --describe --topic titles
-
-# Alter topic config
-kafka-configs --bootstrap-server localhost:9092 --alter --entity-type topics --entity-name titles --add-config segment.ms=1000,min.cleanable.dirty.ratio=0.01,delete.retention.ms=100
+# Create a topic with smaller segment size and retention size
+`kafka-topics --bootstrap-server localhost:9092 --create --topic topic1 --partitions 1 --replication-factor 1 --config cleanup.policy=compact --config segment.ms=1000,retention.ms=10000`
 
 # Create a topic that is instantly compacted
-kafka-topics --bootstrap-server localhost:9092 --create --topic quickcompact --partitions 1 --replication-factor 1 --config cleanup.policy=compact --config segment.ms=1000 --config min.cleanable.dirty.ratio=0.01 --config delete.retention.ms=100
+`kafka-topics --bootstrap-server localhost:9092 --create --topic topic1 --partitions 1 --replication-factor 1 --config cleanup.policy=compact --config segment.ms=1000 --config min.cleanable.dirty.ratio=0.01 --config delete.retention.ms=100`
 
-#Get the earliest offset still in a topic
-`bin/kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list localhost:9092 --topic mytopic --time -2`
+# Describe a topic
+`kafka-topics --bootstrap-server localhost:9092 --describe --topic topic1`
 
-#Get the latest offset still in a topic
-`bin/kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list localhost:9092 --topic mytopic --time -1`
+# Alter topic config
+`kafka-configs --bootstrap-server localhost:9092 --alter --entity-type topics --entity-name topic1 --add-config segment.ms=1000,min.cleanable.dirty.ratio=0.01,delete.retention.ms=100`
 
-# Get the consumer offsets for a topic
-`bin/kafka-consumer-offset-checker.sh --zookeeper=localhost:2181 --topic=mytopic --group=my_consumer_group`
+# Get the earliest offset still in a topic
+`kafka-run-class kafka.tools.GetOffsetShell --broker-list localhost:9092 --topic topic1 --time -2`
+
+# Get the latest offset still in a topic
+`kafka-run-class kafka.tools.GetOffsetShell --broker-list localhost:9092 --topic topic1 --time -1`
+
+# Get the consumer offsets for a topic?
+`kafka-consumer-offset-checker --zookeeper=localhost:2181 --topic=topic1 --group=my_consumer_group`
 
 # Purge a topic
-```
-bin/kafka-topics.sh --zookeeper localhost:2181 --alter --topic mytopic --config retention.ms=1000
-... wait a minute ...
-bin/kafka-topics.sh --zookeeper localhost:2181 --alter --topic mytopic --delete-config retention.ms
-```
+`kafka-topics --zookeeper localhost:2181 --alter --topic topic --config retention.ms=1000`
+Then reset it
+`kafka-topics --zookeeper localhost:2181 --alter --topic mytopic --delete-config retention.ms`
 
 # Read from __consumer_offsets
 Add the following property to config/consumer.properties: exclude.internal.topics=false
-```
-bin/kafka-console-consumer.sh --consumer.config config/consumer.properties --from-beginning --topic __consumer_offsets --zookeeper localhost:2181 --formatter "kafka.coordinator.GroupMetadataManager\$OffsetsMessageFormatter"
-```
+`kafka-console-consumer --consumer.config config/consumer.properties --from-beginning --topic __consumer_offsets --zookeeper localhost:2181 --formatter "kafka.coordinator.GroupMetadataManager\$OffsetsMessageFormatter"`
