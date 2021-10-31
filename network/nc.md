@@ -1,4 +1,5 @@
 * `nc -l port` listen for inbound connection on a port
+  * **NOTE** some variations of `nc` requires `nc -l -p port`
 * `nc 10.0.2.10 port` connect to remote host and port
 * `nc -u ...` on UDP rather than TCP (which is default)
 * `nc -w 10` terminate connection after 10 seconds
