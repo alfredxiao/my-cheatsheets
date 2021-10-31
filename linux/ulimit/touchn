@@ -1,0 +1,8 @@
+#!/bin/bash
+
+mkdir data || true
+count=$1
+
+for i in $(seq $count); do
+  touch data/$i
+done
