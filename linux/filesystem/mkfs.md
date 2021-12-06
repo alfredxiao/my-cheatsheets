@@ -1,0 +1,3 @@
+- Create File system
+  - `mkfs -t ext4` or
+  - `mkfs.ext4 -L MYLABEL /dev/sda1`

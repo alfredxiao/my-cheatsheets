@@ -1,0 +1,25 @@
+- Meaning GRUB on MBR
+- boot.img 512 bytes, on drive marked as MBR
+- Stage 1 :
+    - boot.img looking for core.img
+- State 1.5:
+    - core.img sits at beginning of ?
+    - core.img to locate the actual boot partition of the system
+- Stage 2
+    - actual boot partition gets read
+    - looking for /boot/grub, and files grub.conf or menu.lst
+    - another file is device.map, which indicates which drive has linux kernel to be loaded
+- grub.conf or menu.lst
+    - kernel vmlinux.img root=….   —> Kernel image
+    - initrd initramfs.img. —> init RAM image
+    - provides multiple options (each can be a different version of kernel)
+- grub-install
+    - to install: grub-install /dev/sda1
+        - where the location (/dev/sda1) is the path to boot partition, can be found via
+            - df -h
+            - findmnt /boot
+            - lsblk
+    - or: grub-install ‘(hd0)’
+        - where ‘(hd0)’ is found when running ‘grub’
+        - ‘find /grub/stage1’ which tells ‘(hd0,0)’
+    - Don’t really do it when it is already installed

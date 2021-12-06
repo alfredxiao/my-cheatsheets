@@ -29,3 +29,11 @@
 * to find out ports from `/proc/PID`
   1. `ls -l /proc/PID/fd` will see socket and inode value
   2. `cat /proc/PID/net/tcp grep INODE_VALUE` the second column is port number in hex code
+* to find open ports
+  * `ss -tulp` list listening ports with program name (both tcp and udp)
+  * `ss -tuna` list both listening and non-listening ports (both tcp and udp)
+  * `lsof -i`
+  * `nmap host1`
+* to find out what processes are using a port number
+  * `fuser 80/tcp`
+  * `fuser 39287/tcp` will work if no matter this is the client socket or server socket port number

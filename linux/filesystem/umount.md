@@ -1,0 +1,3 @@
+- umount -L ALABEL
+- umount /dev/sdb1
+- umount /mnt/pont1   

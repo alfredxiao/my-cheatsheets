@@ -1,0 +1,4 @@
+- free
+    - free -m
+    - free -g
+    - free -h
