@@ -1,6 +1,8 @@
 # Boot loader
 * run by `BIOS`
 * its job is to run full OS
+* BIOS firmware has no knowledge of bootloader, operating system, or even what a partition is.
+* All the firmware does is to run the small boot loader from MBR
 
 # Where to find boot loader
 * Most BIOS setup allows finding boot loader from

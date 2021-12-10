@@ -1,6 +1,8 @@
 # Basics
 - used with executable files.
 - it tells kernel to run the program with the permission of the owner and not the user account actually running the program
+- this bit does not work on bash scripts any more
+- many file systems can be mounted with `nosuid` option
 
 # Display
 - `rws` meaning `rwx` + `s`

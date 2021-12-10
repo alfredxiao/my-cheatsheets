@@ -14,3 +14,6 @@
 
 # Stats on inode
 - `df -i` —> shows info about used, and free inodes.
+
+# Print file system info
+- `df -T`

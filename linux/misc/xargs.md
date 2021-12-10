@@ -25,3 +25,8 @@
 * `find ./foo -type f -name "*.txt" -exec rm {} \;`
 * `find ./foo -type f -name "*.txt" | xargs rm`
 * In general `xargs` is much faster
+
+- find . -empty -type f | xargs rm -f
+    - find … -exec handles files one at a time, which is slower
+- grep -l “junk” *.txt | xargs -I {}  mv {} test/bak/
+- find . -name “*.sh” | xargs ls -al > scripts.txt

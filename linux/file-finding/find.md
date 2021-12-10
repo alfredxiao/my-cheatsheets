@@ -54,6 +54,9 @@
 - `find . -size +100k` size is > 100*1024 bytes
 - `find . -size +1M` size is > 1024*1024 bytes
 
+# find by newer than another file
+- `find . -newer /etc/passwd`
+
 # actions
 - `find . -name '*.txt' -delete` delete found files
 - `find . -name '*.txt' -print` print file name (actually is the default action)

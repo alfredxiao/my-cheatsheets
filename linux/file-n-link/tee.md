@@ -1,0 +1,3 @@
+- reads from stdin, writes it stdout and files
+- `ls -d /usr/share/doc/lib[Xx]* | tee lib-docs.txt`
+- `cmd | tee f1 | cmd | tee f2 `

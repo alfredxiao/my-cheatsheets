@@ -33,3 +33,8 @@ Tools
 - `83` : linux partition
 - `82` : linux swap partition
 - `8E` : linux LVM Volume
+- `EF` : EFI partition
+
+# Directories on their own partitions (generally)
+- `/var`
+- `/boot`

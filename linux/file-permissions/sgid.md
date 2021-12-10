@@ -5,7 +5,7 @@
   - when any user runs `wall` is in the `tty` group during current session
 
 # SGID on a directory
-* the group ownership of any further files and directories created within will be set to the same group
+* the group ownership of any further **files** and **directories** created within will be set to the same group
 * further, sub directories created will also have the SGID bit set on.
 
 # to setgid
