@@ -30,8 +30,8 @@ Tools
   * `gparted` (GUI Tool)
 
 # Commonly used disk partition type id
-- `83` : linux partition
 - `82` : linux swap partition
+- `83` : linux partition
 - `8E` : linux LVM Volume
 - `EF` : EFI partition
 

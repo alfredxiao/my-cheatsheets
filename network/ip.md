@@ -1,5 +1,8 @@
 # `ip`
 * from `iproute2` package
+* replacing `ifconfig`
+* does extra work of several other legacy commands such as `route` and `arp`.
+
 ## `ip addr`
 * `ip addr show`
   * `ip a s`

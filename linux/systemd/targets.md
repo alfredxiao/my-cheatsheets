@@ -9,3 +9,7 @@ targets are not exclusive
 * `systemctl isolate abc.target` to start a target with
  minimal dependencies
   * similar to `init x`
+
+# Special targets
+- `rescue.target` similar to single user mode in SysV mode, allows only root to login, no network, mounts all local filesystems
+- `emergency.target` even more restricted than rescue target. it mounts only the root filesystem, and mounts it as read-only.

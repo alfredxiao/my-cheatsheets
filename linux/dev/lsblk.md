@@ -7,3 +7,7 @@
 
 # View SCSI
 * `lsblk -s`
+
+# View filesytem
+- `lsblk -fs`
+- or `lsblk -f`

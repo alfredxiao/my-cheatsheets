@@ -1,19 +1,22 @@
 brief explanation of directories within "/sys"
 
-/sys/block : Contains known block devices.
+`/sys/block` : Contains known block devices.
 
-/sys/bus : Contains all registered buses.
+`/sys/bus` : Contains all registered buses.
 
-/sys/class : Contains Devices.
+`/sys/class` : Contains Devices.
 
-/sys/device : All devices known by the kernel organized by the bus that they connect to.
+`/sys/device` : All devices known by the kernel organized by the bus that they connect to.
 
-/sys/firmware : Contains firmware files for some devices.
+`/sys/firmware` : Contains firmware files for some devices.
 
-/sys/fs : Contains files to control filesystems.
+`/sys/fs` : Contains files to control filesystems.
 
-/sys/kernel : Various kernel related files.
+`/sys/kernel` : Various kernel related files.
 
-/sys/module : Loaded kernel modules. Each module is represented by a directory of the same name.
+`/sys/module` : Loaded kernel modules. Each module is represented by a directory of the same name.
 
-/sys/power : Various files to handle power state of system.
+`/sys/power` : Various files to handle power state of system.
+
+Configuration
+* e.g. `/proc/sys/net/ipv4/icmp_echo_ignore_all`

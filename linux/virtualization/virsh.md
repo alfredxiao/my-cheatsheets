@@ -1,0 +1,1 @@
+If you have hypervisor software installed, most likely you can employ the `virsh` shell utility (not typically installed by default) to manage your VMs using shell scripts, which is convenient. You’ll need the `libvirt` library installed as well to support this utility.

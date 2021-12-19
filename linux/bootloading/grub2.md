@@ -15,6 +15,24 @@
 
 # Editing Config
 - **NOT** like grub legacy, in GRUB2, we do not edit config files directly
+- Example config (`grub.cfg`), not for direct editing
+```
+menuentry "CentOS Linux" { [...]
+  set root=(hd1,1)
+  linux16 /vmlinuz[...]
+  initrd /initramfs[...]
+}
+menuentry "Windows" {
+  set root=(hd0,1) [...]
+}
+```
+- Location of the config file
+  - `/boot/grub/grub.cfg` non EFI
+  - `/boot/efi/EFI/centos/grub.cfg` EFI
+
+# Index!
+- GRUB2 still uses `0` to identify the first drive
+- BUT it uses `1` to identity the first partition, whereas GRUB Legacy uses `0` for this!
 
 # Commands
 - RedHat based commands: `grub2-*`
@@ -24,9 +42,18 @@
   - to view default boot entry for grub config
   - (redhat)
 ## `grub2-mkconfig`/`grub-mkconfig`
+  - `grub2-mkconfig -o /boot/grub2/grub.cfg`
   - generates `/boot/grub2/grub.cfg` from `/etc/default/grub` config file
-  - no args needed when running it
   - should you want to custom the generation, take a look at `/etc/grub.d/`
 - On Debian, commands have no ‘2’ in them
 ## `update-grub`
 - available on debian as well, which does same thing
+- without the need to have `-o` option
+
+# Kernel parameters
+- `ro` mount root file system as readonly
+- `mem` Set the total amount of available system memory
+- `systemd.unit=` boot into specified target
+
+# Reinstall
+- `grub2-install /device`

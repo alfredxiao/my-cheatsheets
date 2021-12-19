@@ -2,12 +2,17 @@
 
 # Create archive
 - `tar -cf mytar.tar myfolder`
+- `tar -cf mytar.tar myfolder1 myfile2`
+
+# to add a file to existing tar file
+- `tar -rf archive.tar myfile1`
 
 # List content
 - `tar -tf mytar.tar`
 
 # Extract
 - `tar -xf mytar.tar`
+- `tar -xzf archive.tar.gz myfolder/myfile.*` to extract specified files only
 
 # Create gzipped archive
 - `tar -czf mytar.tgz myfolder`

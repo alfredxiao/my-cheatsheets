@@ -55,3 +55,13 @@
 * Using I/O ports to send data to the CPU can be somewhat slow. To speed things up, many devices use direct memory access (DMA) channels. DMA channels do what the name implies—they send data from a hardware device directly to memory on the system, without having to wait for the CPU. The CPU can then read those memory locations to access the data when it’s ready.
 * As with I/O ports, each hardware device that uses DMA must be assigned a unique channel number.
 * View current channel assignment by `cat /proc/dma`
+
+# `/proc/cmdline` vs `/proc/nnn/cmdline`
+* see what arguments were passed to the kernel at boot time
+* to ensure a new line is printed, use `cat /proc/123/cmdline; echo`
+
+# `/proc/loadavg`
+* `0.12 0.46 0.25 1/254 3052`
+  * 1 5 15mins load, max is 1 for one core, 4 for four cores
+  * 1/254: CPU 1, 254 process
+  * 3052: last executing process

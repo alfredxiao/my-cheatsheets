@@ -1,13 +1,13 @@
 # approach 1
-* mkdir /etc/systemd/system/xxx.service.d
-* vi /etc/systemd/system/xxx.service.d/override.conf
-* systemctl daemon-reload
-* systemctl restart xxx.service
+1. `mkdir /etc/systemd/system/xxx.service.d`
+2. `vi /etc/systemd/system/xxx.service.d/override.conf`
+3. `systemctl daemon-reload`
+4. `systemctl restart xxx.service`
 
 # approach 2
-* systemctl edit xxx.service
-* which results in `/xxx.service.d/override.conf`
+1. `systemctl edit xxx.service`
+2. which results in `/xxx.service.d/override.conf`
 
 # approach 3
-* systemctl edit --full xxx.service
-* which results in file `/etc/systemd/system/xxx.service`
+1. `systemctl edit --full xxx.service`
+2. which results in file `/etc/systemd/system/xxx.service`

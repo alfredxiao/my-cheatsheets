@@ -10,3 +10,8 @@
 * `-p` display PID/program name for sockets
 * `-t` only tcp sockets
 * `-u` only udp sockets
+
+* `netstat -tln`: Currently open tcp ports
+  * `-t` for tcp
+  * `-l` for listening
+  * `-n` for numeric

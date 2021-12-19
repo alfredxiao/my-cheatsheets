@@ -17,3 +17,11 @@
     - swapon -L SWAP —> turn on swap on partition on partition identified by a label
 - swapoff
     - swapoff -L SWAP —> turn off swap by label
+
+Swap Space
+- swap partition  (very common setup)
+- swap file (rather than dedicated partition)
+    - Much slower than using dedicated partition
+- Sizing
+    - old ‘rule of thumb’ is 1.5~2x the size of RAM
+    - nowadays, it is up to you, maybe <50%, maybe zero

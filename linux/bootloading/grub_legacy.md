@@ -38,10 +38,27 @@
   - `kernel vmlinux.img root=….   ` —> Kernel image
   - `initrd initramfs.img`  —> init RAM image
   - provides multiple options (each can be a different version of kernel)
+- Example OS section
+```
+title CentOS Linux
+  root (hd0,0)
+  kernel (hd0,0)/boot/vmlinuz
+  initrd /boot/initrd
+title Windows
+  rootnoverify (hd0,0)
+```
+- **note** that disk and partition are both indexed from zero on
 
 # grub-install
-- to install:
-  - `grub-install /dev/sda1`
+- to install
+  - install to drive
+    - `grub-install /dev/sda`
+    - `grub-install '(hd0)'`
+    - this will install grub binary into MBR record
+  - install to partition
+    - `grub-install /dev/sda1`
+    - `grub-install '(hd0,0)'`
+    - this installs into boot sector of specified partition instead of MBR
 - where the location (`/dev/sda1`) is the path to boot partition, can be found via
   - `df -h`
   - `findmnt /boot`

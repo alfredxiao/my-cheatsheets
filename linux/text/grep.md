@@ -24,6 +24,10 @@
 * `grep -E 'e+' myfile.txt`
   * this uses extended regex
   * Extended Regex: allows the use of `?` `+` and `|`
+* `grep -Ev '^#|^$' afile` removes empty or comment lines
+
+# Don't use regex
+- `grep -F "US$" myfile`
 
 # Recursive directory
 * `grep -R abc mydir`
@@ -36,7 +40,7 @@
 * `grep -q abc myfile.txt`
   * scripts use exit status code to find out if matches are found or not
 
-# other greps
+# grep family
 * `egrep` is `grep -E`
 * `fgrep` is `grep -F` meaning there is no regrex
 * `rgrep` is `grep -r`

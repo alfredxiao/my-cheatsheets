@@ -20,3 +20,6 @@
 - create partition
 - create file system
 - mount it manually or added to fstab to make it persistent
+
+# Kernel modules
+- `ls /lib/modules/$(uname -r)/kernel/fs/*/*ko` lists modules related to filesystem

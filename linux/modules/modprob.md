@@ -1,3 +1,6 @@
+# Basics
+- `modprobe` is for adding or removing modules
+
 # Remove
 * `modprobe -rv module1`
 

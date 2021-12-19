@@ -4,6 +4,9 @@
 - `gzip afile`
 - `gunzip afile.gz`
 
+# Info
+- `gzip -l afile.gz`
+
 # View
 - `zcat afile.gz`
 

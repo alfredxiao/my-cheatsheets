@@ -61,3 +61,6 @@
 - `find . -name '*.txt' -delete` delete found files
 - `find . -name '*.txt' -print` print file name (actually is the default action)
 - `find . -name '*.txt' -exec rm {} \;` pass to a command
+
+# find by inode number
+- `find / -inum 278772`

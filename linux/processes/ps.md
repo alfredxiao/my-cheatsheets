@@ -31,7 +31,19 @@
 * `ps -u user1`
 * `ps -u 1001`
 
-# on a pid
+# by pid
 * `ps nnn`
 * `ps --pid nnn`
 * `ps p nnn`
+
+`sleep`
+* `sleep 88` 88 seconds?
+
+`ps -o`
+* `ps -o pid,tty,time,%cpu,cmd` defines what columns to output
+
+sort
+* `ps -o pid,tty,time,%mem,cmd --sort %mem` or `+%mem`
+* in descending order: `-%mem`
+
+`pgrep`

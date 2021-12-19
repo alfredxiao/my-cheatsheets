@@ -1,0 +1,1 @@
+If you see the hypervisor flag (instead of vmx or svm), this means your Linux OS is not running on a physical machine, but a virtual one. You can check to see which hypervisor is being employed via the `virt-what` utility, which may or may not be installed on your Linux distro by default.
