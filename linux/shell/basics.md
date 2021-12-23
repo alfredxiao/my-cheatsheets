@@ -46,3 +46,35 @@
 # `||`
 - means logical OR, Depending on the result of the first command, the second command will either run or be skipped.
 - `mkdir may-already-exists || true `
+
+# Types of Shells (in terms of login)
+## interactive login shell
+- most normal shell, can find out this by `echo $0`, where `-` in `-bash` indicates it is a login shell
+- `login` means `.profile` stuff will be loaded
+## interactive non-login shell
+- running `bash` from a already running shell starts an interactive but non-login shell
+- `non-login` means `.profile` stuff will not be loaded
+## non-interactive login shell
+- `bash --login myscript.sh`
+- `--login` tells the shell that it is an **already logged in** shell, please load `/.profile` and other stuff to setup environment
+## non-interactive non-login shell
+- `bash myscript.sh` run within an interactive shell will start a new shell
+- in the new shell, no user interaction, no loading of `.profile` stuff
+
+# Find info about current shell
+- `echo $0` -> current shell name, `-bash` means login shell
+- `cat /proc/$$/cmdline`
+- `ps -f` -> current shell process info
+- `readlink /proc/$$/exe` -> current shell executable name
+- `echo $SHELL` shell set for current user, **not necessarily** the current running shell
+- `cat /etc/shells` all valid login shells currently installed
+- `shopt login_shell` tells if current shell is login shell or not
+
+# Shell options
+- `echo $-` displays current shell options
+- `h` - Remember the location of commands as they are looked up
+- `i` - It means shell is interactive
+- `m` - Job control is enabled
+- `B` - The shell will perform brace expansion
+- `H` - Enable ! style history substitution. This flag is on by default when the shell is interactive.
+- `s` - Commands are read from the standard input device such as keyboard. This option allows the positional parameters to be set when invoking an interactive shell or when reading input through a pipe.

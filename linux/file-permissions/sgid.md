@@ -11,3 +11,9 @@
 # to setgid
 * `chmod g+s file/dir`
 * `chmod 2775 file/dir` basically plus 2000
+
+# Test it
+1. `cp $(which id) myid`
+2. `sudo chown .group22 myid`
+3. `sudo chmod g+s myid`
+4. `./myid -Gn` will reports `group22`

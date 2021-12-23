@@ -30,3 +30,6 @@ user2 ALL=WEB
 
 # Execute as another group
 - `sudo -g group1 touch group1file`
+
+# Login
+- `sudo -i` login as root

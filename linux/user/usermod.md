@@ -18,6 +18,9 @@
 # add a supplementary group:
 - `usermod -aG newgroupname username`
 
+# Change user home
+- `usermod -d /home/newhome user1`
+
 * Change UID is dangerous as it makes existing files orphaned
 * Lock a user: `usermod -L auser`
 * Unlock a user: `usermod -U auser`

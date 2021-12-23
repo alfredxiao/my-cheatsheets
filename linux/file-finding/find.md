@@ -25,7 +25,7 @@
 
 # find by user
 - `find . -user user1`
-- `find . -nouser`
+- `find . -nouser` finds files do not being to an account
 
 # find empty files/dirs
 - `find . -empty`

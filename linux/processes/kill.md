@@ -17,3 +17,7 @@
 
 # show available signals
 * `kill -l`
+
+# Signals
+- `SIGTERM`: 15
+- `SIGKILL`: 9

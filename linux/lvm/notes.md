@@ -9,16 +9,7 @@ LVM (Logical Volume Manager)
     - Volume Group: a logical name for your 3 disks grouped together
     - Logical Volume: Logical portion that you VG is split into.
     - File system: one LV maps to one Filesystem
-- Commands
-    - pvs : lists PV
-    - vgs : lists VG
-    - lvs : lists LV
-    - lvdisplay: display LV info
-    - mkfs.xfs /dev/mapper/<VGNAME>-<LVNAME>  —> format a LV file system
+    - `mkfs.xfs /dev/mapper/<VGNAME>-<LVNAME>`  —> format a LV file system
 - To check current LVM status
     - cat /etc/fstab
         - where lines starting with ‘/dev/mapper/‘ is LV
-- To Create Things
-    - pvcreate /dev/sde /dev/sdf
-    - vgcreate <VGNAME> /dev/sde /dev/sdf
-    - lvcreate -n <LVNAME> -L 3G <VGNAME>

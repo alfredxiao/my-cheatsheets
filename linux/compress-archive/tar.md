@@ -3,6 +3,7 @@
 # Create archive
 - `tar -cf mytar.tar myfolder`
 - `tar -cf mytar.tar myfolder1 myfile2`
+- or `tar cf mytar.tar myfolder`
 
 # to add a file to existing tar file
 - `tar -rf archive.tar myfile1`

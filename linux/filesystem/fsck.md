@@ -5,6 +5,9 @@
 - `fsck /dev/sda1`
 - `fsck -r /dev/sda1` check and report
 
+## Check all listed in `/etc/fstab`
+- `fsck -A`
+
 ## by label
 - `fsck -r LABEL=SRV`
 ## by partition

@@ -6,6 +6,7 @@
 * PATA
 * SATA
 * SCSI
+* NVME
 
 # Device file
 * Linux kernel assigns a connected drive a file in the /dev directory. That file is called a **raw device**, as it provides a path directly to the drive from the Linux system. Any data written to the file is written to the drive, and reading the file reads data directly from the drive.
@@ -28,5 +29,3 @@
 
 # LVM
 * uses device mapper
-
-# RAID 

@@ -1,0 +1,2 @@
+- faster than HDD
+- is able to use existing HDD interface, e.g. SATA

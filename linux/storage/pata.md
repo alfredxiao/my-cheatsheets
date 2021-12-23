@@ -1,0 +1,3 @@
+- Was called ATA and only supported hard drives
+- Later added support for more types of devices like tape, CD, etc.
+- Allows two storage devices to be connected to the same interface/socket on the motherboard via one cable

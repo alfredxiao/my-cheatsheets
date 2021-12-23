@@ -9,6 +9,8 @@
 
 # Using '{}'
 - `ls a{1,2,3}b` would match the same as above
+- or `ls a{1..3}b`
+- or `ls a[1-3]b`
 - `mkdir projects/{data,software,document}` make three directories
 
 # Expanding

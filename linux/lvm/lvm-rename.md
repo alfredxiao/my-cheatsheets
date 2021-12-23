@@ -1,0 +1,2 @@
+`vgrename <OLD_VGNAME> <NEW_VGNAME>`
+`lvrename <VGNAME> <OLD_LVNAME> <NEW_LVNAME>`
