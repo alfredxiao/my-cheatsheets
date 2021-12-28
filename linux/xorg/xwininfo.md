@@ -1,0 +1,1 @@
+provides window information. If no options are given, an interactive utility asks you to click on the window for which you desire statistics. The displayed stats include location information, the window’s dimensions (width and height), color map ID, and so on.

@@ -23,3 +23,6 @@ echo "ABC" | od -ct x1
          41  42  43  0a
 0000004
 ```
+
+# Offset format
+- `od -Ax -t x1 myfile` prints offset in hex code 

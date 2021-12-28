@@ -11,6 +11,7 @@
 
 # differentiate between file and directories
 * `ls -F` appends a `/` to directory names
+* also `|` to pipes, `=` to sockets
 
 # Friendly size
 * `ls -hl` gives better size indication for files

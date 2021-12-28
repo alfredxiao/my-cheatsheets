@@ -18,6 +18,7 @@
 - `/etc/crontab` for system
 - `/etc/cron.d/` for system
 - `/etc/cron.[hourly|daily|weekly|monthly]` for system, and always executed as root
+  - put normal non cron format scripts here
 - `/var/spool/cron/` or `/var/spool/crontab/` for individuals
 
 # Commands
@@ -47,4 +48,4 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
 - The environment must be set to whatever is necessary for a given user because cron does not provide an environment of any kind.
 - The `SHELL` variable specifies the shell to use when commands are executed. This example specifies the Bash shell.
 - The `MAILTO` variable sets the email address where cron job results will be sent.
-- The third line sets up the `PATH` for the environment. 
+- The third line sets up the `PATH` for the environment.

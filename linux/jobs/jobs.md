@@ -2,8 +2,8 @@
 * `mycmd &`
 * another approach
   1. `mycmd`
-  2. `Ctrl-Z`
-  3. `bg %n` n is number from above `Ctrl-Z` output
+  2. `Ctrl-Z` which stopps the job
+  3. `bg %n` where n is number from above `Ctrl-Z` output
 
 # List background jobs
 * `jobs`
@@ -13,4 +13,4 @@
 * `fg %n` n is number from `jobs` output
 
 # Stop a background job
-* `kill %n` 
+* `kill %n`

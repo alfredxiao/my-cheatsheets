@@ -9,6 +9,7 @@
 * `ss -p` display PID/program name for sockets
 * `ss -t` only tcp sockets
 * `ss -u` only udp sockets
+* `ss --unix` shows unix domain sockets
 
 * meant to replace netstat?
 * The main reason a user would use the ss command is to view what connections are currently established between their local machine and remote machines, statistics about those connections, etc.
