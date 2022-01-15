@@ -1,2 +1,2 @@
-timedatectl
-timedatectl set-ntp on
+
+`timedatectl set-ntp on`

@@ -1,0 +1,2 @@
+- for debugging, (need to unmount first?)
+- subcommands: freesp, frag

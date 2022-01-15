@@ -1,4 +1,6 @@
-- This permission does not affect individual files. However, at the directory level, it restricts file deletion. Only the owner (and root) of a file can remove the file within that directory.
+- This permission does not affect individual files. However, at the directory level, it restricts file deletion.
+- Only the owner (and root) of a file can remove the file within that directory.
+- Only the owner can modify the file content in that directory
 
 # Example
 - `ls -ld /tmp` which has this bit on

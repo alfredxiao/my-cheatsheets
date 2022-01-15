@@ -5,7 +5,7 @@
   - Linux system time, as kept by `date` command
 
 # Write hwclock with Linux system time
-- `hwclock -w`
+- `hwclock -w` same as `--systohc`
 
 # Write Linux system time with hwclock time
-- `hwclock -s`
+- `hwclock -s` same as `--hctosys`

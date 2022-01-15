@@ -18,17 +18,6 @@ The `init` program implementations
   * `who -r`
   * `chkconfig`
 
-  # Predefined runlevels
-  * A Runlevel is a high level system state, the definitions of each runlevel can vary from system to system, but levels 0/1/6 are common
-  * `0`: System shutdown, can safely remove power
-  * `1`: Single user mode, without network
-  * `2`: multi user mode, without network
-  * `3`: multi user mode, with network
-  * `4`: custom
-  * `5`: multi user mode, graphical mode login
-  * `6`: reboot
-  * Varies slightly across distributions
-
   # `/etc/inittab`
   * defines Runlevels and services/actions
   * `id:5:initdefault:` means default runlevel is 5
@@ -39,7 +28,7 @@ The `init` program implementations
     * if you change from 5 to 3, for example, will close GUI and back to CLI
 
   # Scripts for runlevels
-  * Usually stored in `/etc/init.d/`
+  * Usually stored in `/etc/init.d/` where it links to `/etc/rc*.d/`
   * The script responsible starts/stops services is file `/etc/rc.d/rc`
   * Each level has a directory namely `/etc/rc0.d/`, etc.
     * has symbolic links to those scripts in `/etc/init.d/`

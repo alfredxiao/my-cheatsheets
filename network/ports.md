@@ -1,0 +1,17 @@
+# Well-known ports
+- `20/21` FTP
+- `22` SSH
+- `23` Telnet
+- `25` SMTP
+- `53` DNS (tcp&udp)
+- `80` HTTP
+- `110` POP3
+- `123` NTP (udp)
+- `143` IMAP
+- `161/162` SNMP
+- `389` LDAP
+- `443` HTTPS
+- `514` Syslog Remote
+- `636` LDAPS
+- `993` IMAPS
+- `995` POP3S

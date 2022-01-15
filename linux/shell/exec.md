@@ -1,0 +1,3 @@
+- is a shell builtin command
+- `exec < myscript.sh` would run scripts within current shell (not in a subshell)
+- place a `$SHELL` at the last line of the script file to keep the shell running, otherwise, the shell is terminated after running the script

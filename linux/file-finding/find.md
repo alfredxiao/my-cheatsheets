@@ -21,11 +21,16 @@
 # Find by permission bits
 - `find . -perm 644`
 - `find . -perm 4744` finds files SUID is on, also permission bits are `744`
-- `find . -perm /4000` finds files SUID is on, no matter what permission bits are
+- `find . -perm /4000` finds files SUID is on, ignoring permission bits
+- `find / -perm /6000 -type f` finds files with both SUID and SGID on
 
 # find by user
 - `find . -user user1`
 - `find . -nouser` finds files do not being to an account
+
+# find by group id
+- `find / -gid 1003`
+- `find / -gid 1003 2>/dev/null`
 
 # find empty files/dirs
 - `find . -empty`

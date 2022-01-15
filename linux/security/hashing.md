@@ -1,0 +1,1 @@
+- Some older hash algorithms, such as MD5, are not collision free.

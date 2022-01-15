@@ -2,7 +2,7 @@ To freeze a XFS file system the basic syntax is:
 
 `xfs_freeze -f /mount/point`
 
-The -f flag requests that the specified XFS filesystem should be set to a state of frozen, immediately stopping any modifications from being made. When this option is selected, all ongoing transactions in the file system are allowed to complete. Any new write system calls are halted.
+The `-f` flag requests that the specified XFS filesystem should be set to a state of frozen, immediately stopping any modifications from being made. When this option is selected, all ongoing transactions in the file system are allowed to complete. Any new write system calls are halted.
 
 To unfreeze a XFS file system the basic syntax is:
 

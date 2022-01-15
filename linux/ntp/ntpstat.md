@@ -1,0 +1,1 @@
+Immediately after starting, `ntpd` will begin the processes of synchronizing your software clock. Be sure to wait at least **10 to 15 minutes*8 before checking its status. You can do this via the `ntpstat` command, as shown in Listing 7.47.

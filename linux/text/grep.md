@@ -19,10 +19,12 @@
 # Whole word only
 * `grep -w abc myfile.txt`
 
+# Using grokking
+- `grep [AJ] myfile` find either `A` or `J`
+
 # using regex
-* `grep '[^0-9]' myfile.txt`
-* `grep -E 'e+' myfile.txt`
-  * this uses extended regex
+* `grep '[^0-9]' myfile.txt` for standard regex
+* `grep -E 'e+' myfile.txt` for extended regex
   * Extended Regex: allows the use of `?` `+` and `|`
 * `grep -Ev '^#|^$' afile` removes empty or comment lines
 

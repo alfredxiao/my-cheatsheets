@@ -20,14 +20,7 @@
   - `lpr -P EPSON_ET_3750_Series test.txt`
 - `lprm`: Remove a specific print job from the print queue
   - `lprm nnn` : remove job from queue identified by a number seen from output of `lpq`
-- `lpadmin` configures printer and class queues provided by CUPS
-  - `lpadmin -p CUPS-PDF -E` : enables a printer for printing and accepting jobs
 
 # What printers are installed
 - `lpstat -s` : check what printers are installed
 - `lpinfo -v` : check what types of printer connections are available
-
-# Install printer
-- `lpadmin -p CUPS-PDF -v cups-pdf:/` : install a PDF printer
-- `lpadmin -p CUPS-PDF -m "CUPS-PDF.ppd”` : Use a specific driver for a printer
-- `apt install printer-driver-cups-pdf`

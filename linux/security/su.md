@@ -11,3 +11,4 @@
 
 # Run a command as anyuser
 - `su user1 -c 'touch user1file'`
+- `su -c 'touch /root/rootfile'` as root

@@ -18,8 +18,10 @@
 # by port and connection
 * `lsof -i [46][protocol][@hostname|hostaddr][:service|port]` open files by a network connection
 * `lsof -i :23` shows connections with port number 23
+* `lsof -i tcp:23` shows connections with port number 23
 * `lsof -i -sTCP:LISTEN` shows LISTENING TCP ports
 * `lsof -i -sTCP:ESTABLISHED` shows ESTABLISHED TCP connections
+* `lsof -iTCP` shows TCP connections (including listening and others)
 * `lsof -iUDP` shows UDP connections
 * `lsof -i6` shows IPv6 connections
 

@@ -3,3 +3,5 @@
 
 # Custom stdout
 * `nohup mycmd > my.out &`
+
+- `nohup` means say no to `SIGHUP`

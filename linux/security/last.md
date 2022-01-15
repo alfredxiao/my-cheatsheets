@@ -3,3 +3,5 @@
 * `last`
 * `last auser`
 * `lastb` for bad/failed logins
+
+- `last -f /var/log/ wtmp.1` to view data from the `/var/log/wtmp.1` file.

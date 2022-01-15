@@ -33,6 +33,8 @@
 # Arithmetic
 - `echo $((2*100+30))`
 - `echo "Result is $((2*100+30))"`
+- or `echo $[ 2*100 + 30 ]`
+- **Note** this form accepts integer only, not floats
 
 # `;` vs `&&` when running multiple commands
 * `;` runs regardless of outcome of previous command
@@ -47,19 +49,6 @@
 - means logical OR, Depending on the result of the first command, the second command will either run or be skipped.
 - `mkdir may-already-exists || true `
 
-# Types of Shells (in terms of login)
-## interactive login shell
-- most normal shell, can find out this by `echo $0`, where `-` in `-bash` indicates it is a login shell
-- `login` means `.profile` stuff will be loaded
-## interactive non-login shell
-- running `bash` from a already running shell starts an interactive but non-login shell
-- `non-login` means `.profile` stuff will not be loaded
-## non-interactive login shell
-- `bash --login myscript.sh`
-- `--login` tells the shell that it is an **already logged in** shell, please load `/.profile` and other stuff to setup environment
-## non-interactive non-login shell
-- `bash myscript.sh` run within an interactive shell will start a new shell
-- in the new shell, no user interaction, no loading of `.profile` stuff
 
 # Find info about current shell
 - `echo $0` -> current shell name, `-bash` means login shell

@@ -6,6 +6,7 @@ This is for managing the library cache. it is automatically run when we use pack
 2. installation:
   * add your library file to `/usr/lib*` directory tree
   * create a library config file within `/etc/ld.so.conf.d/` and points to library file location
+    - this `/etc/ld.so.conf.d/` is loaded as indicated by `/etc/ld.so.conf`
 3. config
   * use `ldconfig` to update library cache
 

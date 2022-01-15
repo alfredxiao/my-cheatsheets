@@ -22,6 +22,8 @@
 * `systemctl list-units` List active units (or have been active during current system session)
 * `systemctl list-units --all` List all (not necessary active) units
 * Further filter by type: `systemctl list-units --type=service`
+- `systemctl list-timers`
+- `systemctl list-sockets`
 
 # List failed units
 - `systemctl --failed`
@@ -32,6 +34,7 @@
 * `stop`
 * `restart`
 * `enable` make it start automatically at boot time
+  - `systemctl enable --now myservice` to enable and start it
 * `disable` make it not start automatically at boot time
 * `is-enabled`
 * `is-active`

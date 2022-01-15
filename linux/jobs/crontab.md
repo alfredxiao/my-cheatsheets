@@ -13,6 +13,19 @@
 - `* * * * * username <command to execute>` this format is used for system wide crontab at `/etc/crontab`
 - `*/5` on the `minute` field means every 5 minutes
 - `09-17` on the `hour` field means from 09 to 17
+- `15,30,45` on the `minute` field means on 15/30/45 minutes of each our
+
+# Special format
+- `@INTERVAL command`
+## supports
+- `@reboot` run once, at system startup
+- `@yearly` same as `0 0 1 1 *`
+- `@annually` same as `@yearly`
+- `@monthly` same as `0 0 1 * *`
+- `@weekly` same as `0 0 * * 0`
+- `@daily` same as `0 0 * * *`
+- `@midnight` same as `daily`
+- `@hourly` same as `0 * * * *`
 
 # Location
 - `/etc/crontab` for system

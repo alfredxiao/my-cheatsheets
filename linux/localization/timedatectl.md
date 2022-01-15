@@ -19,3 +19,7 @@
 
 # Set NTP on
 - `timedatectl set-ntp yes`
+- or `timedatectl set-ntp 1`
+
+# Set hardware clock to use UTC or not
+- `timedatectl set-local-rtc 0` 0 for local, 1 for UTC

@@ -1,5 +1,5 @@
 * `ping hostname/IP`
-* `ping -c 5 hostname/IP`
+* `ping -c 5 hostname/IP` with specified counts
 * `ping -s 100 hostname/IP` --> alter size of packets
 * `ping -i 3 hostname/IP`  --> alter interval for sending packets
 * `ping -q hostname/IP` --> quite - only shows summary

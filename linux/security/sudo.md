@@ -8,6 +8,9 @@ Cmnd_Alias WEB = /bin/systemctl restart httpd.service, /bin/systemctl reload htt
 
 user2 ALL=WEB
 ```
+* Format is `<USER/GROUP> HOST=(AS_USER:AS_GROUP) COMMANDS`
+  - e.g. `root ALL=(ALL:ALL) ALL`
+  - e.g. `%wheel	ALL=(ALL)	ALL` where `%wheel` refers to a group
 
 * do something as another user or superuser
 * will result in an entry placed in a log file. Each entry includes the name of the user who executed the command, the command that was executed and the date and time of execution

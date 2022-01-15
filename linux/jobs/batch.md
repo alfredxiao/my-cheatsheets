@@ -1,0 +1,2 @@
+- same as `at -b`
+- `batch` jobs will jon when system load permits

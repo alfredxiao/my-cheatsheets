@@ -8,3 +8,4 @@
   * date: when logged in  
   * location: could be CLI, a terminal in GUI, a remote machine
 * `who -b` for boot time
+* `who -u` for logged in users remote IP and their shell PID

@@ -1,3 +1,7 @@
+# Basics
+- IPv4 uses 32 bits to represent an IP address
+- IPv6 uses 128 bits
+
 # `ip`
 * from `iproute2` package
 * replacing `ifconfig`

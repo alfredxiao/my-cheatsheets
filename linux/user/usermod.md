@@ -1,6 +1,9 @@
 
-* `su - user2`
-* `usermod -L user1` lock a user's password
+# Change shell
+- `usermod -s /bin/ksh user1`
+
+# Lock & Unlock
+* `usermod -L user1` locks a user's password
   * account is not locked completely, e.g. `su - user1` could work
   * `usermod -e 1 user1` to lock an account
   * `usermod -s /sbin/nologin user1` to disallow login shell
@@ -17,6 +20,9 @@
 
 # add a supplementary group:
 - `usermod -aG newgroupname username`
+
+# Set Home directory
+- `usermod -d /path user1`
 
 # Change user home
 - `usermod -d /home/newhome user1`

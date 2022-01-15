@@ -1,0 +1,3 @@
+- command line to query a specified ntp server to receive a new time (make sure nptd is NOT running prior running this command)
+- this will update system date time with the response back from specified time server
+- ntpdate 1.centos.pool.ntp.org —> set system time with query result from specified time server

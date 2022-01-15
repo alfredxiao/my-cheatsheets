@@ -20,7 +20,10 @@
 - `rpm -e mypackage`
 
 # Update a package
-* `rpm -U mypackage.rpm`
+* `rpm -U mypackage.rpm` will install no matter if an earlier version is installed
+
+# Freshen a package
+- `rpm -F package.rpm` to Freshen the package only if an earlier version is already installed
 
 # Query dependencies
 * `rpm -qR mypackage.rpm`

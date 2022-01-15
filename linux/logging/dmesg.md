@@ -1,0 +1,6 @@
+- `/var/log/dmesg`
+- Linux Kernel boot messages
+- reset once rebooted
+- troubleshooting device issues
+- can be viewed by command `dmesg`
+    - `dmesg -x —level=err,warn`

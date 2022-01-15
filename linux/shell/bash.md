@@ -15,22 +15,8 @@ read NAME
 Return value from script
 * `exit 138`
 
-Test conditions
-* `[ condition ]` is same as `test condition`
-* `test -f /mydir/myfile` file exists
-* `test ! -f /mydir/myfile` file does not exists
-* `test -d /mydir` dir exists
-* `test -x 'apath/acmd'` a cmd is executable by the current user
-* `test 1 -eq 1` numeric equality
-* `test ! 1 -eq 1` numeric inequality
-* `test 1 -ne 1` same as above
-* `test 'a' = 'a' ` string equality
-* `test 'a' != 'a' ` string inequality
-* `test 1 -eq 1 -o 2 -eq 2`  OR (as `-o`)
-* `test 1 -eq 1 -a 2 -eq 2`  AND (as `-a`)
 
-`if`
-* Forms
+# `if`
 ```
 if [...]; then
 else
@@ -44,7 +30,7 @@ else
 fi
 ```
 
-`case`
+# `case`
 ```
 case "$VAR" in
 abc|def)
@@ -58,24 +44,79 @@ ghi)
 esac
 ```
 
-`seq`
+# `for`
+## enumeration
+```
+for color in "Red" "Green"
+do
+  echo "Color is: $color"
+done
+```
+## `seq`
 ```
 for num in `seq 1 10`
 do
   touch file$num
 done
 ```
+## range
+```
+for i in {1..5}
+do
+  echo "ID-$i"
+done
+```
+## iterate over command output
+```
+for file in $(ls | sort)
+do
+  echo "File is: $file"
+done
+```
 
-Background Job
-* `dosomething &`
-  * output: `[1] 107`
-    * `[1]`: job number (unique in this shell)
-    * `107`: process id (unique in this OS)
-* `jobs`: lists all jobs in current shell
-* `fg %1` to bring job 1 to foreground
-* To `PAUSE`/`suspend` a process: type `Ctrl-Z`
-* `bg %1` to bring the `PAUSED` job to running in the Background
-* To kill job number 1: `kill %1`
+# `while`
+```
+while [ condition ] ; do
+  commands
+done
+```
+
+# `until`
+```
+until [ CONDITION ]
+do
+  COMMANDS
+done
+```
+
+# Functions
+## Forms
+- with `function` keyword
+```
+function fname {
+  commands
+}
+```
+- without `function` keyword
+```
+fname() {
+  commands
+}
+```
+## Use a function
+- `fname` and **NOT** `fname()`
+## Return a value and check it
+```
+fname() {
+  return 123
+}
+
+fname
+echo "Return value is $?"
+
+# alternatively
+output=$(fname)
+```
 
 Stream Redirecting
 * `1` for STDOUT, `2` for STDERR, `0` for STDIN
@@ -91,3 +132,6 @@ Stream Redirecting
   * the order of which stream goes first does not matter
 * `<` to send a file to a command as STDIN
   * e.g. `tr 'a-z' 'A-Z' < example.txt`
+
+# Arithmetic
+- `((result=n*n))`
