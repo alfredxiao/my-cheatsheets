@@ -3,8 +3,8 @@ use `type` to determine if a command is
 * shell builtin
 * regular program
 
-* `type ***` to tell type of a command (is it a shell built-in, alias, external command file, etc.)
-* `type -a ***` to list all
+* `type mycmd` to tell type of a command (is it a shell built-in, alias, external command file, etc.)
+* `type -a mycmd` to list all (aliases and path to the command, for example)
 
 # brief mode
 - `type -t ls` --> `alias`

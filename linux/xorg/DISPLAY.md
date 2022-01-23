@@ -15,5 +15,6 @@
 2. set `X11Forwarding yes`
 3. `systemctl restart sshd` on `appmachine`
 4. `xauth generate :0 .` on `gmachine`
-4. `ssh -Y user1@IP1`
-5. `xeyes` (within the ssh session)
+5. `ssh -Y user1@IP1`
+  - `-Y` is less secure than `-X` but faster
+6. `xeyes` (within the ssh session)

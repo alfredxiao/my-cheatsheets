@@ -33,8 +33,24 @@
 # Arithmetic
 - `echo $((2*100+30))`
 - `echo "Result is $((2*100+30))"`
-- or `echo $[ 2*100 + 30 ]`
-- **Note** this form accepts integer only, not floats
+- `echo $[ 2*100 + 30 ]`
+- or
+```
+x=2
+y=100
+let z=x*y+30
+echo $z
+```
+- or
+```
+((z=x*y+30))
+((z+=12))
+((z++))
+```
+- **Note** these forms accept integer only, not floats
+- `echo "2*100+30.5" | bc`
+## Operators
+- `+`, `-`, `*`, `/`, `%`
 
 # `;` vs `&&` when running multiple commands
 * `;` runs regardless of outcome of previous command
@@ -67,3 +83,7 @@
 - `B` - The shell will perform brace expansion
 - `H` - Enable ! style history substitution. This flag is on by default when the shell is interactive.
 - `s` - Commands are read from the standard input device such as keyboard. This option allows the positional parameters to be set when invoking an interactive shell or when reading input through a pipe.
+
+# Parameter expansion
+- `mycmd ./*` expands to `mycmd ./file1 ./file2 ./file3 ./dir1`
+- `find . -name '*.c'` should be quoted

@@ -6,3 +6,6 @@
 
 # View Firmware
 - `lshw | grep -i firmware`
+
+# Short mode
+- `lshw -short -C disk`

@@ -1,0 +1,14 @@
+lpadmin
+lpr
+nmcli
+/etc/services
+xauth
+ldconfig
+xargs -0 treat the input strings as Null separated not space separated.
+ext2 ext3(=ext2+journaling, so it is slower) ext4
+notify users when shutdown
+MANPATH and other noteable envvars
+
+/sbin/init s/q
+
+The alternative to cron is anacron. This command has the ability to run events after their scheduled time if the system was not running when it was due.

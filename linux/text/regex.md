@@ -1,0 +1,23 @@
+# Basics
+- `^` start of a string or line
+- `$` end of a string or line
+- `.` wildcard that matches any character except new line (`\n`)
+- `|` matches a specific character or group of characters on either side of it (e.g. `a|b`)
+- `\` used to escape a special character
+- `t` the character `t`
+- `az` the string `az`
+- `[ABC]` character set, either `A` or `B` or `C`
+- `[^ABC]` negated character set, any character not in this group
+- `[A-Z]` range character set, from `A` to `Z`
+- `[a-zA-Z]` range character set, from `A` to `Z` or from `a` to `z`
+- inside `[]` then no need to escape
+- `\w` word and `\W` not word
+- `\b` word boundary and `\B` non word boundary
+- `\d` digit and `\D` not digit
+- `\s` white space and `\S` not white space
+- `A{3}` exactly 3 `A`s
+- `A{3,}` 3 or more `A`s
+- `A{3,6}` between 3 and 6 of `A`s
+- `A?` zero or one of `A`
+- `A*` zero or more of `A`
+- `A+` one or more of `A`

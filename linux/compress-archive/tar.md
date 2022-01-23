@@ -14,6 +14,7 @@
 # Extract
 - `tar -xf mytar.tar`
 - `tar -xzf archive.tar.gz myfolder/myfile.*` to extract specified files only
+- `tar -xf mytar.tar --directory=dir2` to extract to specified target directory
 
 # Create gzipped archive
 - `tar -czf mytar.tgz myfolder`

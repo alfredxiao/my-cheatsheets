@@ -15,6 +15,9 @@
 - `-gt` >
 - `-le` <=
 - `-lt` <
+## When inside `(())`
+- `if ((x>y)) && ((y>0))`
+- `((z=(x>y)?100:200))`
 
 # String Comparison
 - `=` equals **Note** there must be a space before and after `=`

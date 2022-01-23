@@ -2,6 +2,8 @@
 - `A` (address)
   - Used to map a host name to an IP address. Generally, A records are IP addresses. If a computer consists of multiple IP addresses, adapter cards, or both, it must possess multiple address records.
   - e.g. `142.250.70.174`
+- `AAAA`
+  - IPV6 address
 - `CNAME` (canonical name)
   - Can be used to set an alias for the host name
   - e.g. `ghs.googlehosted.com`

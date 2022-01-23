@@ -51,3 +51,6 @@
 - `rpm2cpio xyz.rpm > xyz.cpio` converts to a cpio file
   - then run `cpio -idv < xyz.cpio`
 - `rpm2cpio xyz.rpm | cpio -idmv` extracts its content to current folder
+
+# Check Signature
+- `rpm --checksig`

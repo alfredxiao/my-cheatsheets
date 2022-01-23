@@ -17,7 +17,7 @@
   - `lpq -P EPSON_ET_3750_Series`
 - `lpr`: Submit files for printing
   - `lpr afile` : send a file to printer
-  - `lpr -P EPSON_ET_3750_Series test.txt`
+  - `lpr -P EPSON_ET_3750_Series test.txt` with -P to specify which printer
 - `lprm`: Remove a specific print job from the print queue
   - `lprm nnn` : remove job from queue identified by a number seen from output of `lpq`
 

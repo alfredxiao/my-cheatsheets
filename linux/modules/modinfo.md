@@ -4,3 +4,4 @@
 `modinfo`
 * `modinfo amodule` to show description, parameters etc. of a module
 * `modinfo -p amodule` to show parameters only
+- `modinfo amodule -F 'description'` show a field
