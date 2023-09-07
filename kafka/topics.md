@@ -1,6 +1,3 @@
-# Notes
-scripts below does not use the `.sh` extension, such that makes it a bit easier for Confluent Platform
-
 # List topics
 `kafka-topics --bootstrap-server localhost:9092 --list`
 
@@ -28,14 +25,7 @@ scripts below does not use the `.sh` extension, such that makes it a bit easier 
 # Get the latest offset still in a topic
 `kafka-run-class kafka.tools.GetOffsetShell --broker-list localhost:9092 --topic topic1 --time -1`
 
-# Get the consumer offsets for a topic?
-`kafka-consumer-offset-checker --zookeeper=localhost:2181 --topic=topic1 --group=my_consumer_group`
-
 # Purge a topic
 `kafka-topics --zookeeper localhost:2181 --alter --topic topic --config retention.ms=1000`
 Then reset it
 `kafka-topics --zookeeper localhost:2181 --alter --topic mytopic --delete-config retention.ms`
-
-# Read from __consumer_offsets
-Add the following property to config/consumer.properties: exclude.internal.topics=false
-`kafka-console-consumer --consumer.config config/consumer.properties --from-beginning --topic __consumer_offsets --zookeeper localhost:2181 --formatter "kafka.coordinator.GroupMetadataManager\$OffsetsMessageFormatter"`

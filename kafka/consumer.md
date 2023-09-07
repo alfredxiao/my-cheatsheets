@@ -84,3 +84,6 @@ kafka-avro-console-consumer \
 
 # View read only committed messages
 `--consumer-property "isolation.level"="read_uncommitted"`
+
+# From Specified Offset/Partition
+`--partition N --offset M`

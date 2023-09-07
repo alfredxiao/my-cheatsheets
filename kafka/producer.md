@@ -39,7 +39,7 @@ Example input:
 h1:v1,h2:v2^KEY|VALUE
 ```
 
-# Enable mTLS
+# Enable mTLS (see mtls_client.properties)
 ```
 kafka-console-producer \
 --bootstrap-server $BOOTSTRAP_SERVER \
