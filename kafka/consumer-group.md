@@ -15,6 +15,7 @@ kafka-consumer-groups \
     --topic t2
 ```
 Dry run instead of execute: `--dry-run`
+
 To Different offsets:
 - `--to-current`                            Reset offsets to current offset.
 - `--to-datetime <String: datetime>`        Reset offsets to offset from datetime.
