@@ -26,9 +26,10 @@ menuentry "Windows" {
   set root=(hd0,1) [...]
 }
 ```
-- Location of the config file
+- Location of the (generated) config file
   - `/boot/grub/grub.cfg` non EFI
   - `/boot/efi/EFI/centos/grub.cfg` EFI
+  - `/etc/default/grub` for your editing, same location for Debian/Redhat
 
 # Index!
 - GRUB2 still uses `0` to identify the first drive
@@ -41,13 +42,13 @@ menuentry "Windows" {
 - `grub2-editenv list`
   - to view default boot entry for grub config
   - (redhat)
-## `grub2-mkconfig`/`grub-mkconfig`
+## `grub2-mkconfig` (Redhat) / `grub-mkconfig` (Debian)
   - `grub2-mkconfig -o /boot/grub2/grub.cfg`
   - generates `/boot/grub2/grub.cfg` from `/etc/default/grub` config file
   - should you want to custom the generation, take a look at `/etc/grub.d/`
-- On Debian, commands have no ‘2’ in them
+- On Debian, commands and paths have no `2` in them
 ## `update-grub`
-- available on debian as well, which does same thing
+- available on debian as well, which does same thing as `grub2-mkconfig`
 - without the need to have `-o` option
 
 # Kernel parameters

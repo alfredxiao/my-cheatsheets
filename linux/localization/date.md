@@ -4,6 +4,9 @@
 # Date yyyy-MM-dd
 - `date +%F`
 
+# show epoch
+- `date +%s`
+
 # Date MM/dd/YY
 - `date +%D`
 - or `date +%m/%d/%y`

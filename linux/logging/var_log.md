@@ -29,7 +29,7 @@
   * Messages from the default configuration of the `systemd-journald.service`; can be configured in the /etc/journald.conf file amongst other places.
 * `Xorg.0.log`
   * Messages from the X Windows (GUI) server.
-* `yum.log`
+* `yum.log`/`dpkg.log`
   * Track the installation of system components and software packages.
 * `httpd/`
   * logs recorded by the Apache server.

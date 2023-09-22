@@ -12,3 +12,14 @@ MANPATH and other noteable envvars
 /sbin/init s/q
 
 The alternative to cron is anacron. This command has the ability to run events after their scheduled time if the system was not running when it was due.
+
+iptables
+
+Which of these file types can a virtual machine directly use as its read/write filesystem?
+qcow2
+.tar.gz or tgz
+iso
+rpm
+
+
+set +-

@@ -1,6 +1,6 @@
 # Create a hard link
 - `ln original.file link.file`
-- **note** hard link works only if they are on the same file system
+- **note** hard link works only if they are on the same file system, and does not work for directory
 
 # display inode number
 - `ls -i`

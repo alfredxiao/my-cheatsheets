@@ -1,5 +1,6 @@
 # Bascis
 - target need to be unmounted first!
+- `fsck` sis simply a front-end for the various filesystem checkers (fsck.fstype) available under Linux, which can be found via `ls /sbin/fs* -l`
 
 # Check
 - `fsck /dev/sda1`

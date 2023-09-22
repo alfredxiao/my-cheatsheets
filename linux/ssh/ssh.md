@@ -16,16 +16,6 @@
 # `/etc/ssh/ssh_know_hosts`
 - This file is like the `known_hosts` file for all users (on the system)
 
-# `/etc/ssh/ssh_config`
-- Contains OpenSSH client configurations. May be overridden by `ssh` command options or settings in the `~/.ssh/config` file.
-
-# `/etc/ssh/sshd_config`
-- Contains the OpenSSH daemon (sshd) configurations.
-## Some config entries
-- `AllowTcpForwarding`: Permits SSH port forwarding. (defaults to yes)
-- `ForwardX11`: Permits X11 forwarding. (defaults to no)
-- `PermitRootLogin`: Permits the root user to log in through an SSH connection. (Default is yes.) Typically, should be set to no.
-
 # Key files
 - server keys `/etc/ssh`
   - `ssh_host_*_key`

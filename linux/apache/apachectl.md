@@ -1,0 +1,2 @@
+- `apachectl configtest`
+  - validates config file

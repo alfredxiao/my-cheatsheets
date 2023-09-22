@@ -12,10 +12,15 @@
 
 # filter
 * `u` for user
-* `o` enter `COMMAND=sshd` to filter by process name
+* `o` enter for example `COMMAND=sshd` to filter by process name
 
 # Configuration
 * `W` saves to `~/.toprc`
 
 # renice
 * `r`
+
+# To view full command path
+* `top -c`
+* Note that you can use -> to scroll to the right, left, down, up
+

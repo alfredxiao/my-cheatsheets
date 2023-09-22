@@ -1,0 +1,3 @@
+- test whether AppArmor is enabled
+- just run `aa-enabled`
+- exit code `0` means enabled, `1` means not enabled

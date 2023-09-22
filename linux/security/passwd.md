@@ -37,3 +37,6 @@
 
 # Set inactive
 - `sudo passwd -i user1`
+
+# Script it
+- `echo Temp@$$ | passwd --stdin test1`

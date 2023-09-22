@@ -14,5 +14,13 @@
 # Mount an ISO file
 - `mount /myiso.iso -o ro,loop /media/myiso`
 
+# Remount
+- means mount without umount first
+- `mount -o remount,ro /mnt/data`
+
+# MOunt all from fstab
+- `mount -a`
+- **NOTE** this does not include those swap devices or files, which require `swapon -a`
+
 # Swap
 * To mount a partition created as a swap area, you don’t use the `mount` command but instead use the `swapon` command. The kernel will automatically flag the partition to be used as part of the virtual memory structure.

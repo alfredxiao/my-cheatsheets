@@ -1,0 +1,2 @@
+# Basics
+- install package `smartmontools\`

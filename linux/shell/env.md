@@ -23,3 +23,11 @@
 - `EDITOR` – the user’s preferred text editor.
 - `MANPATH` – the list of directories to search for manual pages.
 - `OSTYPE` – the type of operating system.
+- `_` - last executed command
+
+# To make environment variable to all users in the system
+- `vi /etc/environment`
+  - add a line `MY_GLOBAL_VAR="My Awesome Value"`
+  - will be available to new login sessions
+- `vi /etc/bash.bashrc`
+- `vi /etc/profile.d/myfile`

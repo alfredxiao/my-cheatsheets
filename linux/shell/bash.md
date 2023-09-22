@@ -52,6 +52,12 @@ do
   echo "Color is: $color"
 done
 ```
+```
+for n in 1 2 3 4 5
+do
+  touch "file_$n"
+done
+```
 ## `seq`
 ```
 for num in `seq 1 10`
@@ -71,6 +77,12 @@ done
 for file in $(ls | sort)
 do
   echo "File is: $file"
+done
+```
+```
+for url in $(cat urls.txt)
+do
+  curl "$url" >> pages.txt
 done
 ```
 

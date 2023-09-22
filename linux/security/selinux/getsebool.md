@@ -1,0 +1,1 @@
+- `getsebool -a` list all

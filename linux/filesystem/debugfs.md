@@ -1,0 +1,2 @@
+- `debugfs /dev/nvme1n1p1`
+- then `ls` `cd` `stat file1` etc.

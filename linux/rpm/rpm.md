@@ -10,11 +10,12 @@
 - rpm does NOT handle dependencies like yum does
 
 # List installed software
-* `rpm -qa`
+* `rpm -qa` query all
 
 # Install a package
 * `rpm -i mypackage.rpm`
 * `rpm -ivh` for verbose and a hash mark - the '#####' progress bar
+- add `--replacepkgs` option to kind of 'reconfigure'
 
 # Remove a package
 - `rpm -e mypackage`
@@ -30,10 +31,12 @@
 * `rpm -qR my-installed-package`
 
 # Info about a packages
-- `rpm -qpi` display info on a package
-- `rpm -qpl`lists files in a package
+- `rpm -qi openssh-server` display info on a package
+  - `rpm -qpi openssh-server.rpm`
+- `rpm -ql openssh-server` lists files in a package
+  - `rpm -qpl openssh-server.rpm`
 
-# What package contains this file
+# Which packages owns a file
 - `rpm -qf /usr/bin/yacc` what package contains/provides this yacc file
 - or `rpm -q --whatprovides /usr/bin/yacc`
 
@@ -43,9 +46,15 @@
 # What config files a package provides
 - `rpm -qc mypackage`
 
+# What docs avaialble
+- `rpm -qd mypackage`
+
+# What script will execute when the package is installed
+- `rpm -qp --scripts mypackage.rpm`
+
 # Verify a package (its installation on this host)
 * `rpm -V mypackage.rpm`
-* `rpm -V zsh` would report on a missing config file (for example `/etc/zprofile`)
+* `rpm -V openssh-server` would report on a missing config file (for example `/etc/ssh/sshd_config`)
 
 # Convert rpm to cpio
 - `rpm2cpio xyz.rpm > xyz.cpio` converts to a cpio file

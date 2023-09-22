@@ -1,0 +1,1 @@
+- check syntax in those config files

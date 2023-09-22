@@ -8,6 +8,7 @@
     - add `-y` to not prompt
 
 # Update
+- `yum check-update` list what is updatable
 - `yum update` —> upgrades all installed packages, **preserving** obsolete packages
 - `yum update xyz` updates a single package
 
@@ -24,6 +25,7 @@
 # List packages
 - `yum list installed` —> list all installed packages
 - `yum list available` —> list all available packages
+- `yum list updates` -> updatables
 
 # List dependencies
 * `yum deplist mypackage`
@@ -55,6 +57,10 @@
 
 # List repos
 * `yum repolist all`
+
+# Local install RPM
+- `yum localinstall mypackage.rpm`
+- this will install dependencies for you
 
 # Other RPM Managers
 - Zypper

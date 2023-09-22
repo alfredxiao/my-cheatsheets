@@ -10,6 +10,7 @@ Execute    | Execute | cd working directory to this as long as this permission i
 * `chmod [u|g|o|a]=[rwx] afile` to set permission
 * `chmod nnn afile` where n=0~7
 * `chmod ug+x afile`, `chmod go=rx`
+- `chmod u+x,g+rw afile`
 
 # Add a permission
 - `chmod u+r file1`
@@ -29,3 +30,11 @@ Execute    | Execute | cd working directory to this as long as this permission i
 
 # Using octal codes
 - `chmod 664 file1`
+
+# Soft Links
+- a soft link always appears to have permission bits like `lrwxrwxrwx`
+- `chmod` on a soft link will actually have effect on the original file
+
+# Hard Links
+- a hard link always share same permission bits with original file
+- `chmod` or `chown` on the hard link or the original file yield the same outcome

@@ -4,6 +4,9 @@
 # multiple files
 * `grep ABC file1 file2`
 
+# Multiple patterns
+- `grep -e 'abc' -e 'x.z'`
+
 # highlight found
 * `grep --color ABC myfile.txt`
 
@@ -41,6 +44,11 @@
 # quote mode (for scripting):
 * `grep -q abc myfile.txt`
   * scripts use exit status code to find out if matches are found or not
+
+# Context Lines
+- `grep -B 5 abc myfile.txt` print 5 lines **Before** the matching line
+- `grep -A 5 abc myfile.txt` print 5 lines **After** the matching line
+- `grep -C 2 abc myfile.txt` print 2 lines **Both** before and after the matching line
 
 # grep family
 * `egrep` is `grep -E`

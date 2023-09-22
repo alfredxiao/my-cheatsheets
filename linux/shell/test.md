@@ -18,6 +18,10 @@
 ## When inside `(())`
 - `if ((x>y)) && ((y>0))`
 - `((z=(x>y)?100:200))`
+## formats inside if
+- `if [ $a -gt $b ]; then`
+- `if [[ $a -gt $b ]]; then`
+- `if ((a>b)) ; then`
 
 # String Comparison
 - `=` equals **Note** there must be a space before and after `=`
@@ -50,7 +54,8 @@
 - `[ $myname = $yourname ]` WRONG!
 - `[ "$myname" = "$yourname" ]` correct
 ## When using `<` and `>`
-- either `[[ $name1 > $name2 ]]` but Quoting is usually going to give you the behavior that you want, so make it a habit
+- either use double bracket like `[[ $name1 > $name2 ]]`
+- or have quoting which is usually going to give you the behavior that you want, so make it a habit
 - or `[ "$name1" \> "$name2" ]`
 - `>` and `<` have special meaning to bash, so they should be escaped
 

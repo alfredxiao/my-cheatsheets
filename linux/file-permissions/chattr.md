@@ -22,3 +22,10 @@ changes file attributes
 - `+` : Adds the attribute to the existing attribute of the files.
 - `–` : Removes the attribute to the existing attribute of the files.
 - `=` : Keep the existing attributes that the files have.
+
+# Setting flag
+- `sudo chattr +i file1`
+- `sudo` is required, as even owner cannot change attributes
+
+# Prerequisite
+- file system mounted with `ext_attr`, which enables the use of extended attributes. This eature is supported by ext2, ext3, and ext4.

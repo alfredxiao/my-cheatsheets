@@ -36,6 +36,7 @@
 - readonly snapshots for faster backup
 - more efficient handling of small files and directory indexes
 - online defragmentation
+- is copy-on-write
 
 # ReiserFS
 - Offers several improvements over ext4

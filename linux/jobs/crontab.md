@@ -14,6 +14,8 @@
 - `*/5` on the `minute` field means every 5 minutes
 - `09-17` on the `hour` field means from 09 to 17
 - `15,30,45` on the `minute` field means on 15/30/45 minutes of each our
+- month can be `1`, `Jan`, `January`
+- weekday can be `0`, `Sun`, `Sunday`
 
 # Special format
 - `@INTERVAL command`

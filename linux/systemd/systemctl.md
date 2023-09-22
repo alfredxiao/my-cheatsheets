@@ -22,11 +22,16 @@
 * `systemctl list-units` List active units (or have been active during current system session)
 * `systemctl list-units --all` List all (not necessary active) units
 * Further filter by type: `systemctl list-units --type=service`
+- `systemctl list-units --type=service --state=inactive` filter by state
 - `systemctl list-timers`
 - `systemctl list-sockets`
 
 # List failed units
 - `systemctl --failed`
+
+# Full output
+- `-l` to not truncate output
+  - e.g. `systemctl status myservice.service -l`
 
 # Operation on a service unit
 * `status` as in `systemctl status abc.service`

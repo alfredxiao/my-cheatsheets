@@ -1,0 +1,1 @@
+- most commands has the `--help` option to give help info

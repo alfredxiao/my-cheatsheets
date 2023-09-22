@@ -11,6 +11,7 @@
 
 # Show info
 * `apt-cache showpkg xyz`
+- `apt-cache show xyz`
 
 # Stats
 * `apt-cache stats` stats about packages

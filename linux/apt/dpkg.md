@@ -17,7 +17,7 @@
 
 # List installed
 - `dpkg -l  xyz`
-- `dpkg -l` list all installed packages
+- `dpkg -l` list all installed packages (not just the packages installed via dpkg itself)
 
 # Remove Package
 - `dpkg -P xyz` or `--purge`
@@ -26,7 +26,7 @@
   * removes package but leaves configurations
 
 # Search by fuzzy match
-- `dpkg -S xyz`  —> Search through the database for a file specified and lists out any mentions of the specified file or string
+- `dpkg -S xyz`  Search for a filename from installed packages
 
 # Re-configure
-- `dpkg-reconfigure` —> modify a package by running the app’s config tool again
+- `dpkg-reconfigure` Reconfigure an installed package by running the app’s config tool again

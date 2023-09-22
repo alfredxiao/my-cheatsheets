@@ -10,3 +10,6 @@
 
 # set number of days before warning password expiry
 - `chage -W 14 user1`
+
+# Force user to change password on next login
+- `chage -d0 user1`

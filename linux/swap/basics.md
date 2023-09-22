@@ -4,24 +4,21 @@
     - specified partition type/id: 82(00)
     - after create swap partition, one has to make a swap filesystem on it, also list it in fstab to make it persistent across restarts, also need to ‘swapon’ it.
 - mkswap
-    - makes a swap filesystem on a swap partition
-    - mkswap -L SWAP /dev/sda2 —> make a filesystem with a label
 - fstab
     - you can have multiple entires of swap partitions
     - avoid using /dev/sda2 in fstab, better use UUID, or label
     - ‘LABEL=SWAP swap swap defaults 0 0’
 - swapon
-    - turn on swap
-    - swapon -a —> turn on all swap partitions (for things listed in fstab)
-    - swapon -U <THE_UUID> —> turn on swap on partition identified by UUID
-    - swapon -L SWAP —> turn on swap on partition on partition identified by a label
 - swapoff
     - swapoff -L SWAP —> turn off swap by label
 
 Swap Space
 - swap partition  (very common setup)
 - swap file (rather than dedicated partition)
-    - Much slower than using dedicated partition
+    - Much slower than using dedicated partition (this an old saying!?)
 - Sizing
     - old ‘rule of thumb’ is 1.5~2x the size of RAM
     - nowadays, it is up to you, maybe <50%, maybe zero
+
+# Priority
+- the higher the number, the higher the swap partition or file gets used

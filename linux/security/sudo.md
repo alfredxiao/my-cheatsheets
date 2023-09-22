@@ -9,6 +9,7 @@ Cmnd_Alias WEB = /bin/systemctl restart httpd.service, /bin/systemctl reload htt
 user2 ALL=WEB
 ```
 * Format is `<USER/GROUP> HOST=(AS_USER:AS_GROUP) COMMANDS`
+  - `HOST` here means terminal?
   - e.g. `root ALL=(ALL:ALL) ALL`
   - e.g. `%wheel	ALL=(ALL)	ALL` where `%wheel` refers to a group
 
@@ -36,3 +37,6 @@ user2 ALL=WEB
 
 # Login
 - `sudo -i` login as root
+
+# `sudo !!`
+- runs last command in sudo

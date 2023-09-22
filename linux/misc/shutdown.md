@@ -7,11 +7,9 @@ to power down.
 
 # Commands
 ## Common parameters
-- `--halt`: Makes the command behave like halt.
-- `-p`, `--poweroff`: Makes the command behave like poweroff.
-- `--reboot`: Makes the command behave like reboot.
-- `halt`
-- `poweroff`
+- `--halt`: Makes the command behave like `halt`.
+- `-p`, `--poweroff`: Makes the command behave like `poweroff`.
+- `--reboot`: Makes the command behave like `reboot`.
 - `shutdown`
   - `shutdown -P` poweroff
   - `shutdown -H` halt
@@ -21,4 +19,6 @@ to power down.
   - `shutdown -P +2` shutdown in 2 minutes
   - `shutdown -P +5 "Shutdown in 5 mins, please backup and exit!"`
   - `shutdown -k` do not shutdown, just write wall message
-- `reboot`
+- `reboot`    same as `shutdown -r` but does NOT accept time argument
+- `halt`      same as `shutdown -H` but does NOT accept time argument
+- `poweroff`  same as `shutdown -P` but does NOT accept time argument
