@@ -1,0 +1,1 @@
+users normally created with certificates, once certs created, they are automatically recognised. this is very different from service accounts which are managed by Kubernetes, represented as Kubernetes objects
