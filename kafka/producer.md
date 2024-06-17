@@ -2,7 +2,7 @@
 ```
 kafka-console-producer \
   --bootstrap-server localhost:9092 \
-  --topic TOPIC_NAME \
+  --topic string_input \
   --property "parse.key=true" \
   --property "key.separator=|"
 

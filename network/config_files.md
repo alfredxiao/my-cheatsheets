@@ -11,8 +11,8 @@ iface enp0s5  inet static
  address 192.168.2.236
  netmask 255.255.255.0
  gateway 192.168.2.254
- dns-domain sweet.home
- dns-nameservers 192.168.2.254
+ dns-search sweet.home
+ dns-nameservers 192.168.2.254 8.8.8.8
 ```
 - Lines beginning with the word `auto` are brought up at boot time
 ## DHCP
@@ -22,6 +22,25 @@ iface eth0 inet dhcp
 ```
 ## Restart Network Service
 - `systemctl restart networking.service`
+
+# Ubuntu
+- `/etc/netplan`
+- yaml file
+```
+network:
+  version: 2
+  ethernets:
+    ens5:
+      dhcp4: no
+      addresses: [10.9.8.7/24]
+      gateway: 10.9.8.1
+      nameservers:
+        addresses: [8.8.8.8,8.8.4.4]
+      dhcp6: true
+      match:
+        macaddress: 02:b9:28:48:de:22
+      set-name: ens5
+```
 
 # CentOS
 ## Static IP
@@ -56,6 +75,8 @@ BOOTPROTO=dhcp
 HWADDR="00:08:a2:0a:ba:b8"
 TYPE=Ethernet
 NAME="eth0"
+DNS1="8.8.8.8"
+DNS2="8.8.4.4"
 ```
 ## Restart Network Service
 - `systemctl restart network`

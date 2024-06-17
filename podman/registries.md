@@ -1,0 +1,1 @@
+/etc/containers/registries.conf

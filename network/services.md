@@ -20,6 +20,8 @@
 - `443` HTTPS
 - `514` Syslog Remote
 - `636` LDAPS
+- `993` IMAPS
+- `995` POP3S
 - `1521` Oracle DB
 - `2049` NFS
 - `3306` MySQL

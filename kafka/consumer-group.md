@@ -2,7 +2,7 @@
 `kafka-consumer-groups --bootstrap-server $BOOTSTRAP_SERVER --all-groups -describe`
 
 # View single consumer group (and Lag)
-`kafka-consumer-groups --bootstrap-server $BOOTSTRAP_SERVER --group <GROUP_ID> --describe `
+`kafka-consumer-groups --bootstrap-server $BOOTSTRAP_SERVER --describe  --group demo-aggregator `
 
 # Reset Offset 
 ```
