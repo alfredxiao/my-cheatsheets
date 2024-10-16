@@ -34,7 +34,7 @@ kafka-console-producer \
   --property headers.delimiter='^' \
   --property headers.separator=, \
   --property headers.key.separator=:
-  
+
 Example input:
 h1:v1,h2:v2^KEY|VALUE
 ```
@@ -51,7 +51,7 @@ kafka-console-producer \
 --topic TOPIC_NAME
 ```
 
-# Basic Avro Producer 
+# Basic Avro Producer
 ## string key, avro value
 ```
 kafka-avro-console-producer \
@@ -79,14 +79,12 @@ kafka-avro-console-producer \
 ```
 
 
-# Avro Producer (mTLS is enabled, Schema Registry SSL)
+# Avro Producer with mTLS (mTLS with both Broker and Schema Registry)
 ```
 kafka-avro-console-producer \
   --bootstrap-server $BOOTSTRAP_SERVER \
-  --producer.config "PATH_TO_mtls_client.properties" \
+  --producer.config client_mtls.config \
   --property schema.registry.url=$SCHEMA_REGISTRY_URL \
-  --property basic.auth.credentials.source=USER_INFO \
-  --property basic.auth.user.info=${USER_INFO} \
   --property schema.registry.ssl.keystore.location=$KAFKA_KEYSTORE_LOCATION \
   --property schema.registry.ssl.keystore.password=$KAFKA_JKS_PASSWORD \
   --property schema.registry.ssl.truststore.location=$KAFKA_TRUSTSTORE_LOCATION \
@@ -98,14 +96,29 @@ kafka-avro-console-producer \
   --topic TOPIC_NAME
 ```
 
-# Producing null 
+# Avro Producer with SASL (USERNAME/PASSWORD with Schema Registry)
+```
+kafka-avro-console-producer \
+  --bootstrap-server $BOOTSTRAP_SERVER \
+  --producer.config client_sasl.config \
+  --property schema.registry.url=$SCHEMA_REGISTRY_URL \
+  --property basic.auth.credentials.source=USER_INFO \
+  --property basic.auth.user.info=$SR_USERNAME:$SR_PASSWORD \
+  --property value.schema="$(< SCHEMA.avsc)" \
+  --property key.serializer=org.apache.kafka.common.serialization.StringSerializer \
+  --property parse.key=true \
+  --property key.separator='|' \
+  --topic TOPIC_NAME
+```
+
+# Producing null
 ```
 kafka-console-producer \
   --bootstrap-server localhost:9092 \
   --topic TOPIC_NAME \
   --property "parse.key=true" \
   --property "key.separator=|" \
-  --property "null.marker=~" 
+  --property "null.marker=~"
 
 Example input:
 ~|VALUE
