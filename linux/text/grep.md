@@ -55,3 +55,15 @@
 * `fgrep` is `grep -F` meaning there is no regrex
 * `rgrep` is `grep -r`
 * `pgrep` is for finding process ids
+
+# Combined with other commands!
+Grep a field from payload (e.g. JSON) using pattern
+* `cat abc.json | grep -o '"orderNumber":"\d*"'` (on Mac)
+* `cat abc.json | grep -oP '"orderNumber":"\d*"'` (on Linux)
+which outputs `"orderNumber":"12345"`
+If we want just the number value unquoted:
+* `cat abc.json | grep -o '"orderNumber":"\d*"' | cut -d':' -f2 | cut -d'"' -f2` (on Mac)
+* `cat abc.json | grep -oP '"orderNumber":"\K\d*'` (on Linux, note to remove last double quote)
+Grep a field with value starting with specified character e.g `0`
+* `cat abc.json | grep -o '"orderNumber":"\d*"' | cut -d':' -f2 | cut -d'"' -f2 | grep "^0"` (on Mac)
+* `cat abc.json | grep -oP '"orderNumber":"\K\d*' | grep -e "^0"` (on Linux)
